@@ -82,7 +82,12 @@
 
         .swiper {
             width: 100%;
-            padding: 0 40px 40px 40px;
+            padding: 0 60px 40px 60px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
         }
 
         .swiper-slide {
@@ -104,10 +109,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .swiper-button-next {
-            right: 0;
+            right: 10px;
         }
         .swiper-button-prev {
-            left: 0;
+            left: 10px;
         }
         .swiper-button-next:after,
         .swiper-button-prev:after {
@@ -367,11 +372,11 @@
 
         <!-- Testimonials Section -->
         <section class="py-16 md:py-24 px-6 md:px-12 bg-white">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-7xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-light text-center mb-16 text-gray-800">From Our Spiritual Community
                 </h2>
 
-                <div class="swiper testimonialSwiper px-8">
+                <div class="swiper testimonialSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
@@ -435,7 +440,7 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                                <p class="text-gray-600 italic mb-4">"For people like me, without a strong connection to a temple or a monk, this platform could make prayers so much more accessible."</p>
+                                <p class="text-gray-600 italic mb-4">"Sending money for prayers has always been difficult — bank rejections, long waits, you name it. I’m really excited to have a smooth, modern way to handle it soon."</p>
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
                                         <span class="text-amber-800 font-medium">JC</span>
@@ -697,6 +702,11 @@
             },
             grabCursor: true,
             loop: true,
+            speed: 1500, // Duration of transition animation in milliseconds
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
         });
     </script>
 </body>
