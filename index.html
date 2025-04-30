@@ -7,7 +7,7 @@
     <title>Dharma Connect | Authentic Buddhist Prayers</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;600&display=swap">
@@ -77,6 +77,46 @@
 
             60% {
                 transform: translateY(-5px);
+            }
+        }
+
+        .swiper {
+            width: 100%;
+            padding: 0 40px 40px 40px;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #b4975a;
+            top: 50%;
+            width: 44px;
+            height: 44px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
             }
         }
     </style>
@@ -331,84 +371,101 @@
                 <h2 class="text-3xl md:text-4xl font-light text-center mb-16 text-gray-800">From Our Spiritual Community
                 </h2>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"When I heard about this service, I felt such relief. I’ve always struggled to figure out which prayer is appropriate for my situation and having clear guidance will make a huge difference."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">MF</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Mei Fang L.</p>
-                                <p class="text-sm text-gray-500">KL, Malaysia</p>
+                <div class="swiper testimonialSwiper px-8">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"When I heard about this service, I felt such relief. I’ve always struggled to figure out which prayer is appropriate for my situation and having clear guidance will make a huge difference."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">MF</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Mei Fang L.</p>
+                                        <p class="text-sm text-gray-500">KL, Malaysia</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"The idea that I’ll soon be able to order a prayer quickly and reliably, without endless coordination, is honestly a game-changer."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">JX</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Jun Xiang N.</p>
-                                <p class="text-sm text-gray-500">Singapore</p>
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"The idea that I’ll soon be able to order a prayer quickly and reliably, without endless coordination, is honestly a game-changer."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">JN</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Jun Xiang N.</p>
+                                        <p class="text-sm text-gray-500">Singapore</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"For people like me, without a strong connection to a temple or a monk, this platform could make prayers so much more accessible."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">SL</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Solène L.</p>
-                                <p class="text-sm text-gray-500">Paris, France</p>
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"For people like me, without a strong connection to a temple or a monk, this platform could make prayers so much more accessible."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">SL</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Solène L.</p>
+                                        <p class="text-sm text-gray-500">Paris, France</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"I’ve always hesitated to ask my teacher or center to organize a prayer for me. Just knowing there will be a respectful, professional service is such a relief."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">JE</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Jia En T.</p>
-                                <p class="text-sm text-gray-500">Singapore</p>
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"I’ve always hesitated to ask my teacher or center to organize a prayer for me. Just knowing there will be a respectful, professional service is such a relief."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">JT</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Jia En T.</p>
+                                        <p class="text-sm text-gray-500">Singapore</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"For people like me, without a strong connection to a temple or a monk, this platform could make prayers so much more accessible."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">JC</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Julian C.</p>
-                                <p class="text-sm text-gray-500">Texas, USA</p>
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"For people like me, without a strong connection to a temple or a monk, this platform could make prayers so much more accessible."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">JC</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Julian C.</p>
+                                        <p class="text-sm text-gray-500">Texas, USA</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
-                        <p class="text-gray-600 italic mb-4">"Knowing that I’ll receive photos or videos of the prayers I’ve requested makes the whole experience more personal and meaningful. I’m really looking forward to that feature."</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                                <span class="text-amber-800 font-medium">CH</span>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium">Cheng Hao L.</p>
-                                <p class="text-sm text-gray-500">Taiwan</p>
+                        <div class="swiper-slide">
+                            <div class="testimonial bg-gray-50 p-6 pl-8 rounded-lg">
+                                <p class="text-gray-600 italic mb-4">"Knowing that I’ll receive photos or videos of the prayers I’ve requested makes the whole experience more personal and meaningful. I’m really looking forward to that feature."</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
+                                        <span class="text-amber-800 font-medium">CL</span>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium">Cheng Hao L.</p>
+                                        <p class="text-sm text-gray-500">Taiwan</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -569,6 +626,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -619,12 +677,28 @@
                 });
             });
         });
-    </script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92f6ceec916d5a78',t:'MTc0NDUwMzczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';b.getElementsByTagName('head')[0].appendChild(a)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script
-        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[7] = 'MMERGE7'; ftypes[7] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 
+        // Initialize Swiper
+        const swiper = new Swiper('.testimonialSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                }
+            },
+            grabCursor: true,
+            loop: true,
+        });
+    </script>
 </body>
 
 </html>
